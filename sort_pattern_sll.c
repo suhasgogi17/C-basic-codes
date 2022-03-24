@@ -55,7 +55,7 @@ node getnode ()
     printf("list is empty\n");
     else
     {
-        printf("your data in the list is:\n");
+        printf("your data in the list:\n");
         while(cur!=NULL)
         {
             printf("%d--",cur->n);
