@@ -14,17 +14,7 @@ node getnode ()
      new1=(node) malloc(sizeof (struct sll));
      new1->next=NULL;
      new1->dow=NULL;
-     printf("enter n\n");
-     scanf("%d",&new1->n);
-     return new1;
- }
-
- node getnode2 ()
- {
-     node new1;
-     new1=(node) malloc(sizeof (struct sll));
-     new1->next=NULL;
-     new1->dow=NULL;
+     
      return new1;
  }
 
@@ -32,6 +22,8 @@ node getnode ()
  {
      node cur=head;
      node new1=getnode();
+     printf("enter n\n");
+     scanf("%d",&new1->n);
      if(head==NULL)
      return new1;
      while(cur->next!=NULL)
@@ -50,6 +42,8 @@ node getnode ()
         while(cur->dow!=NULL)
             cur=cur->dow;
      node new1=getnode();
+     printf("enter n\n");
+     scanf("%d",&new1->n);
      cur->dow=new1;
      return head;
  }
@@ -81,7 +75,7 @@ node getnode ()
 
 void sort(node head)
 {
-    node newn= getnode2();
+    node newn= getnode();
     newn->next=NULL;
     node ncur=newn;
     node cur= head;
@@ -92,7 +86,7 @@ void sort(node head)
         cur2=cur;
         while (cur2!=NULL)
         {
-            node new= getnode2();
+            node new= getnode();
             new->next=NULL;
             ncur->n=cur2->n;
             ncur->next=new;
